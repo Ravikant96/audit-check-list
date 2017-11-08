@@ -1,0 +1,242 @@
+<html>
+	<style>
+		table {
+    	border-collapse: collapse;
+    	text-align: center;
+		}
+		table, th, td {
+			border: 1px solid black;
+		}
+		#container {
+			margin: 10px 0;
+		}
+		#heading {
+			display: flex;
+			height: 40px;
+			border: 1px solid black;
+			width: 500px;
+			align-items: center;
+		}
+		.hidden {
+			display: none;
+		}
+		button {
+			height: 30px;
+			color: black;
+			text-align: center;
+			text-decoration: none;
+			font-size: 14px;
+			margin-left: auto;
+			margin-right: 10px;
+		}
+		#result {
+			width: 30px;
+			border: 1px solid black;
+			text-align: center;
+			margin-right: 10px;
+		}
+		.head {
+			display: flex;
+			width: 500px;
+			align-items: center;
+		}
+			.head div {
+				margin-left: auto;
+			}
+	</style>
+	<body>
+		<div class="head">
+			<h1>Audit CheckList</h1>
+			<div>
+				<button onclick="download()">Save/Download</button>
+			</div>
+		</div>
+		<div id="item1">
+			<div id="heading">
+				<h3>Foh and Pos area</h3>
+				<button id="show" onclick="showList('container1')">Show List</button>
+
+				<div id="total">
+					<button onclick="calc('container1')">Total</button>
+				</div>
+				<div id="result">0</div>
+			</div>
+
+			<div id="container1" class="hidden">
+				<table>
+					<thead>
+						<tr>
+							<th>SNo</th>
+							<th>Heading 2</th>
+							<th>Yes</th>
+							<th>No</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Constraint name 1</td>
+							<td><input type="radio" value="yes" name="a"></td>
+							<td><input type="radio" value="no" name="a"></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Constraint name 2</td>
+							<td><input type="radio" value="yes" name="b"></td>
+							<td><input type="radio" value="no" name="b"></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Constraint name 3</td>
+							<td><input type="radio" value="yes" name="c"></td>
+							<td><input type="radio" value="no" name="c"></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Constraint name 4</td>
+							<td><input type="radio" value="yes" name="d"></td>
+							<td><input type="radio" value="no" name="d"></td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+		<div id="item2">
+			<div id="heading">
+				<h3>List 2</h3>
+				<button id="show" onclick="showList('container2')">Show List</button>
+
+				<div id="total">
+					<button onclick="calc('container2')">Total</button>
+				</div>
+				<div id="result">0</div>
+			</div>
+
+			<div id="container2" class="hidden">
+				<table>
+					<thead>
+						<tr>
+							<th>SNo</th>
+							<th>Heading 2</th>
+							<th>Yes</th>
+							<th>No</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Constraint name 1</td>
+							<td><input type="radio" value="yes" name="aa"></td>
+							<td><input type="radio" value="no" name="aa"></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Constraint name 2</td>
+							<td><input type="radio" value="yes" name="bb"></td>
+							<td><input type="radio" value="no" name="bb"></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Constraint name 3</td>
+							<td><input type="radio" value="yes" name="cc"></td>
+							<td><input type="radio" value="no" name="cc"></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Constraint name 4</td>
+							<td><input type="radio" value="yes" name="dd"></td>
+							<td><input type="radio" value="no" name="dd"></td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+		<div id="item3">
+			<div id="heading">
+				<h3>List 3</h3>
+				<button id="show" onclick="showList('container3')">Show List</button>
+
+				<div id="total">
+					<button onclick="calc('container3')">Total</button>
+				</div>
+				<div id="result">0</div>
+			</div>
+
+			<div id="container3" class="hidden">
+				<table>
+					<thead>
+						<tr>
+							<th>SNo</th>
+							<th>Heading 2</th>
+							<th>Yes</th>
+							<th>No</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Constraint name 1</td>
+							<td><input type="radio" value="yes" name="a3"></td>
+							<td><input type="radio" value="no" name="a3"></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Constraint name 2</td>
+							<td><input type="radio" value="yes" name="b3"></td>
+							<td><input type="radio" value="no" name="b3"></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Constraint name 3</td>
+							<td><input type="radio" value="yes" name="c3"></td>
+							<td><input type="radio" value="no" name="c3"></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Constraint name 4</td>
+							<td><input type="radio" value="yes" name="d3"></td>
+							<td><input type="radio" value="no" name="d3"></td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+		<script>
+
+			function showList(id) {
+
+				document.querySelector('#'+id).classList.toggle('hidden');
+			}
+
+			function calc(id) {
+
+				const input = document.getElementById(id);
+				const total = Array.from(input.querySelectorAll('input[value=yes]')).filter(i => i.checked).length;
+				document.getElementById('result').textContent = total;
+			}
+
+			function download() {
+				console.log('clicked');
+
+				const rows = [["name1", "city1", "some other info"], ["name2", "city2", "more info"]];
+				let csvContent = "data:text/csv;charset=utf-8,";
+				rows.forEach(function(rowArray){
+					let row = rowArray.join(",");
+					csvContent += row + "\n";
+				});
+
+				var encodedUri = encodeURI(csvContent);
+				window.open(encodedUri);
+			}
+
+		</script>
+
+	</body>
+
+</html>
